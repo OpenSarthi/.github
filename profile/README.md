@@ -1,74 +1,72 @@
 <div align="center">
 
+<img width="180" height="180" alt="OpenSarthiIcon" src="https://github.com/user-attachments/assets/b3de24e0-ed04-4d3d-97f1-22a0056ab6cd" />
+
+
 # OpenSarthi
 
-### Open-source AI desktop operator for voice, automation, and native system control.
+### Open-source AI Desktop Assistant + Agent
 
-<img src="https://raw.githubusercontent.com/OpenSarthi/opensarthi/main/assets/logo.png" width="180" alt="OpenSarthi Logo"/>
+<p align="center">
+  Voice Interaction • Desktop Automation • Native System Control • AI Agents
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/OpenSarthi/opensarthi?style=for-the-badge&color=00bfff" />
+  <img src="https://img.shields.io/github/forks/OpenSarthi/opensarthi?style=for-the-badge&color=00bfff" />
+  <img src="https://img.shields.io/github/license/OpenSarthi/opensarthi?style=for-the-badge&color=00bfff" />
+  <img src="https://img.shields.io/github/issues/OpenSarthi/opensarthi?style=for-the-badge&color=00bfff" />
+</p>
 
 </div>
 
 ---
 
-## Vision
+## 🚀 Vision
 
 OpenSarthi is building an AI-native desktop runtime focused on:
 
-- Voice-first interaction
-- Native desktop automation
-- Accessibility-aware system control
-- Generalized computer-use primitives
-- Cross-platform AI agents
+- 🎙️ Voice-first interaction
+- 🖥️ Native desktop automation
+- 🧠 Intelligent AI planning
+- ♿ Accessibility-aware system control
+- ⚡ Generalized computer-use primitives
+- 🐧 Linux-first architecture
+- 🌐 Cross-platform future support
 
 The goal is to create an intelligent desktop operator that works naturally across Linux, and later Windows and macOS.
 
 ---
 
-## Core Principles
+## ✨ Features
 
-- OS-first, not browser-first
-- Local-first runtime architecture
-- Lightweight native desktop experience
-- Accessibility-tree-driven automation
-- Secure and sandboxed execution
-- Open-source and extensible
+### 🎤 Voice Assistant
+- Wake word support (`Hey Sarthi`)
+- Speech-to-text pipeline
+- Natural voice responses
+- Local + cloud AI support
 
----
+### 🖱️ Desktop Automation
+- Open applications
+- Click / type / scroll
+- System-level interaction
+- Accessibility tree integration
 
-## Tech Stack
+### 🤖 AI Agent Runtime
+- Multi-step task execution
+- Intelligent planning
+- Tool orchestration
+- Observation → Action → Replanning loop
 
-### Desktop
-- Tauri v2
-- React
-- TypeScript
-- Rust
-
-### Runtime
-- Python 3.12+
-- FastAPI
-- PydanticAI
-
-### Voice
-- Faster Whisper
-- OpenWakeWord
-- Kokoro / Piper TTS
-
-### Automation
-- AT-SPI
-- xdotool / ydotool
-- OpenCV
-- Tesseract OCR
-
-### AI
-- Ollama
-- OpenRouter
-- DeepSeek
-- Qwen
-- Gemini
+### 🔒 Security Focused
+- Sandboxed execution
+- Permission system
+- Risk-aware tool execution
+- Secure local runtime
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```text
 Tauri Desktop Shell
@@ -84,7 +82,52 @@ Linux Desktop / System APIs
 
 ---
 
-## Current Focus
+## 🧩 Tech Stack
+
+### Desktop
+<p>
+  <img src="https://skillicons.dev/icons?i=tauri,react,ts,rust,tailwind" />
+</p>
+
+### Runtime & AI
+<p>
+  <img src="https://skillicons.dev/icons?i=python,fastapi" />
+</p>
+
+### Voice & Automation
+- Faster Whisper
+- OpenWakeWord
+- Kokoro / Piper TTS
+- AT-SPI
+- xdotool / ydotool
+- OpenCV
+- Tesseract OCR
+
+### Models
+- Ollama
+- DeepSeek
+- Qwen
+- Gemini
+- OpenRouter
+
+---
+
+## 📦 Repository Structure
+
+```text
+opensarthi/
+├── apps/
+│   └── desktop/
+├── runtime/
+├── shared/
+├── docs/
+├── scripts/
+└── tooling/
+```
+
+---
+
+## 🎯 Current Focus
 
 We are currently focused on:
 
@@ -93,42 +136,48 @@ We are currently focused on:
 - Accessibility-tree integration
 - Generalized tool execution
 - AI planning runtime
+- Cross-platform abstractions
 
 ---
 
-## Repositories
+## 🛣️ Roadmap
 
-| Repository | Description |
-|---|---|
-| `opensarthi` | Main monorepo |
-| `docs` | Documentation and architecture |
-| `sdk` | Future SDK and integrations |
-
----
-
-## Long-Term Goals
-
-- Cross-platform desktop agents
-- AI-native workflows
-- Persistent memory systems
-- Visual desktop understanding
-- Autonomous task execution
-- Extensible plugin ecosystem
+- [x] Architecture planning
+- [x] Monorepo setup
+- [ ] Voice pipeline
+- [ ] Desktop automation layer
+- [ ] Accessibility integration
+- [ ] AI planning runtime
+- [ ] Memory system
+- [ ] Workflow automation
+- [ ] Cross-platform support
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-OpenSarthi is in active early-stage development.
+OpenSarthi is currently in active early-stage development.
 
-Contributions, ideas, architecture discussions, and experiments are welcome.
+Contributions, discussions, experiments, and ideas are welcome.
+
+---
+
+## 🌌 Philosophy
+
+OpenSarthi is not just another chatbot wrapper.
+
+It is an attempt to build:
+
+```text
+AI-native desktop computing.
+```
 
 ---
 
 <div align="center">
 
-### "Hey Sarthi"
+### “Hey Sarthi”
 
-Building the future of AI-native desktop computing.
+Building the future of AI-native desktop interaction.
 
 </div>
