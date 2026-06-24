@@ -15,7 +15,7 @@
 <a href="https://github.com/OpenSarthi/opensarthi/network/members"><img src="https://img.shields.io/github/forks/OpenSarthi/opensarthi?style=for-the-badge&logo=git&logoColor=white&color=7B2FFE&labelColor=0D1117" alt="Forks"/></a>&nbsp;
 <a href="https://github.com/OpenSarthi/opensarthi/issues"><img src="https://img.shields.io/github/issues/OpenSarthi/opensarthi?style=for-the-badge&logo=github-actions&logoColor=white&color=FF5722&labelColor=0D1117" alt="Issues"/></a>&nbsp;
 <a href="https://github.com/OpenSarthi/opensarthi/pulls"><img src="https://img.shields.io/github/issues-pr/OpenSarthi/opensarthi?style=for-the-badge&logo=git-pull-request&logoColor=white&color=2F8D46&labelColor=0D1117" alt="PRs"/></a>&nbsp;
-<a href="https://github.com/OpenSarthi/opensarthi/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-7B2FFE?style=for-the-badge&logo=open-source-initiative&logoColor=white&labelColor=0D1117" alt="License"/></a>&nbsp;
+<a href="https://github.com/OpenSarthi/opensarthi/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-7B2FFE?style=for-the-badge&logo=apache&logoColor=white&labelColor=0D1117" alt="License"/></a>&nbsp;
 <a href="mailto:kumarkartik147359@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email"/></a>
 
 <br/><br/>
@@ -73,61 +73,19 @@ const openSarthi = {
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="30"> &nbsp;Repository Layout & Components
+## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="30"> &nbsp;Featured Repositories
 
 <div align="center">
 
 <table>
 <tr>
-<td width="50%">
+<td width="100%" align="center">
 
-### <a href="https://github.com/OpenSarthi/opensarthi/tree/main/apps/desktop">🖥️ opensarthi-desktop</a>
+### <a href="https://github.com/OpenSarthi/opensarthi">🤖 OpenSarthi Monorepo</a>
 
-**`Rust`** **`Tauri v2`** **`React 19`** **`Zustand`** **`TypeScript`**
+**`Rust`** **`Tauri v2`** **`Capacitor`** **`React`** **`Python`** **`LangGraph`**
 
-> Desktop overlay client. Provides OS borderless window management, multi-edge snapping layout, token aggregation stats, and WebSocket telemetry stream.
-
-</td>
-<td width="50%">
-
-### <a href="https://github.com/OpenSarthi/opensarthi/tree/main/apps/android">📱 opensarthi-android</a>
-
-**`Capacitor`** **`React 19`** **`Vite`** **`TypeScript`** **`Android OS`**
-
-> Mobile agent interface wrapper powered by Capacitor, adapting the core workspace controls to hand-held layout formats.
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-### <a href="https://github.com/OpenSarthi/opensarthi/tree/main/runtime">⚙️ opensarthi-runtime</a>
-
-**`Python 3.12`** **`LangGraph`** **`FastAPI`** **`SQLite`**
-
-> Core orchestrator backend. Hosts the LangGraph state machine, manages WebSocket channels, schedules tool calls, and compiles session/thread histories.
-
-</td>
-<td width="50%">
-
-### <a href="https://github.com/OpenSarthi/opensarthi/tree/main/runtime/voice">🎙️ opensarthi-voice</a>
-
-**`OpenWakeword`** **`faster-whisper`** **`ONNX`** **`PyAudio`**
-
-> Local voice framework. Calibrates background decibels, triggers wake phrase actions, runs offline speech-to-text, and streams TTS voice replies.
-
-</td>
-</tr>
-
-<tr>
-<td width="100%" colspan="2" align="center">
-
-### <a href="https://github.com/OpenSarthi/opensarthi/tree/main/runtime/tools">🛠️ opensarthi-tools</a>
-
-**`Chrome DevTools`** **`OS Automation`** **`Docker Sandbox`** **`Security Guard`**
-
-> Custom tool registrations: DOM parsing and extraction, keyboard/mouse emulation, sandboxed CLI environments, and token usage estimators.
+> The primary monorepo hosting the cross-platform Tauri desktop HUD shell, the Capacitor Android mobile app, and the shared Python FastAPI sidecar runtime.
 
 </td>
 </tr>
@@ -136,7 +94,7 @@ const openSarthi = {
 <br/>
 
 <a href="https://github.com/OpenSarthi/opensarthi">
-<img src="https://img.shields.io/badge/🔍_Explore_Codebase-0D1117?style=for-the-badge&logoColor=white&color=00D9FF" alt="Explore Code"/>
+<img src="https://img.shields.io/badge/🔍_Explore_Repository-0D1117?style=for-the-badge&logoColor=white&color=00D9FF" alt="Explore Repo"/>
 </a>
 
 </div>
@@ -189,35 +147,6 @@ const openSarthi = {
 
 <br/>
 
-### 🔄 Agentic Execution Flow (LangGraph Architecture)
-
-```mermaid
-graph TD
-    Start([User Input]) --> Classify{Classify Intent}
-    Classify -->|Direct Chat| Respond[Response Bubble]
-    Classify -->|System Task| Plan[Create Plan Graph]
-    Plan --> Execute[Execute First/Next Tool]
-    Execute --> Assess{Assess Result}
-    Assess -->|Success & More Tools| Execute
-    Assess -->|Task Finished| Respond
-    Assess -->|Execution Failure| Heal[Self-Healing Node]
-    Heal -->|Auto-Healed| Execute
-    Heal -->|Blockage / Retry Limit| Replan[Replan / Revise Graph]
-    Replan --> Execute
-    Respond --> End([Done])
-
-    style Start fill:#0D1117,stroke:#00D9FF,stroke-width:2px,color:#fff
-    style End fill:#0D1117,stroke:#00D9FF,stroke-width:2px,color:#fff
-    style Classify fill:#00D9FF,stroke:#0D1117,stroke-width:1px,color:#000
-    style Assess fill:#7B2FFE,stroke:#0D1117,stroke-width:1px,color:#fff
-    style Plan fill:#0D1117,stroke:#00D9FF,stroke-width:1px,color:#fff
-    style Execute fill:#0D1117,stroke:#7B2FFE,stroke-width:1px,color:#fff
-    style Heal fill:#FF5722,stroke:#0D1117,stroke-width:1px,color:#fff
-    style Replan fill:#FF5722,stroke:#0D1117,stroke-width:1px,color:#fff
-    style Respond fill:#2F8D46,stroke:#0D1117,stroke-width:1px,color:#fff
-```
-
-<br/>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════ -->
 <!-- 📈 TECH STACK BADGES                                                          -->
